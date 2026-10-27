@@ -17,6 +17,7 @@ export default function StudentPortal() {
             </section>
             <section id="students">
                 <h2>Students</h2>
+                {/* <SearchBox searchQuery={searchQuery} onChange={updateSearch}> */}
                 {/* <StudentList students={students} /> */}
             </section>
             <section id="addstudent">
