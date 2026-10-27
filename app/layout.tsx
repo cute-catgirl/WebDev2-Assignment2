@@ -9,6 +9,7 @@
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -16,6 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className="bg-orange-50 min-h-screen">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
