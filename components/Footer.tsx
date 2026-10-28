@@ -8,7 +8,7 @@
 
 const Footer = () => {
     return (
-        <footer className="border-t border-slate-200 mt-16">
+        <footer className="bg-white border-b border-orange-200">
             <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
                 <p className="text-sm text-olive-800 px-2">
                     New Generation High School

@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <header className="bg-white border-b border-orange-200">
             <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-                <h1 className="text-lg font-bold text-orange-950">New Generation High School</h1>
+                <h1 className="text-lg font-bold text-orange-950 px-2">New Generation High School</h1>
                 <div>
                     <a className="text-s font-medium text-orange-500
                     hover:bg-orange-200 px-3 py-1 rounded-full hover:text-orange-800"
