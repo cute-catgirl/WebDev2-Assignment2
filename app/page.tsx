@@ -3,6 +3,8 @@ import StudentPortal from "./components/StudentPortal";
 
 export default function Home() {
   return (
-    <StudentPortal></StudentPortal>
+    <div className="m-4">
+      <StudentPortal></StudentPortal>
+    </div>
   );
 }

@@ -8,6 +8,6 @@ import { ChangeEventHandler } from "react";
 
 export default function SearchBox({ searchQuery, onChange }: { searchQuery: string, onChange: ChangeEventHandler }) {
     return (<div>
-        <input type="text" value={searchQuery} onChange={onChange} />
+        <input type="text" placeholder="Search" value={searchQuery} onChange={onChange} className="p-1 border rounded-lg outline-black focus:outline" />
     </div>);
 }
