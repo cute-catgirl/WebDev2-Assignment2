@@ -6,9 +6,17 @@
     other parts of the page for easy navigation. The title is left-aligned and the buttons are right-aligned.
 */
 
+const headerStyle: React.CSSProperties = {
+  position: "fixed",
+  left: "0",
+  top: "0",
+  display: 'block',
+  width: '100%',
+}
+
 const Navbar = () => {
     return (
-        <header className="bg-white border-b border-orange-200">
+        <header className="bg-white border-b border-orange-200" style={headerStyle}>
             <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
                 <h1 className="text-lg font-bold text-orange-950 px-2">New Generation High School</h1>
                 <div>

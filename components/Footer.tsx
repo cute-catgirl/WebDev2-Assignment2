@@ -6,9 +6,17 @@
     the school. The school email can also be clicked to quickly send a message (only in theory; in practice, it is a placeholder).
 */
 
+const footerStyle: React.CSSProperties = {
+  position: "fixed",
+  left: "0",
+  bottom: "0",
+  display: 'block',
+  width: '100%',
+}
+
 const Footer = () => {
     return (
-        <footer className="bg-white border-b border-orange-200">
+        <footer className="bg-white border-t border-orange-200" style={footerStyle}>
             <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
                 <p className="text-sm text-olive-800 px-2">
                     New Generation High School
