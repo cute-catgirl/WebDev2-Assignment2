@@ -3,40 +3,40 @@
 // rough draft, does not take in a list of students and is not responsive
 
 import StudentCard from "@/components/StudentCard";
+import AddStudent from "@/components/AddStudent";
 import {Student} from "@/app/data/students";
 
-const StudentList = () => {
-    // placeholders for testing
-    const studentA:Student = {
-        id: 1,
-        firstName: "John",
-        lastName: "Doe",
-        grade: 5,
-        average: 82
-    };
-    const studentB:Student = {
-        id: 2,
-        firstName: "Jane",
-        lastName: "Doe",
-        grade: 8,
-        average: 74
-    };
-    const studentList: Student[] = [studentA, studentB];
+interface StudentListProps {
+    students: Student[],
+    onAdd: (
+        firstName: string, 
+        lastName: string, 
+        grade: number, 
+        average: number
+    ) => void
+    onRemove: (
+        id: number
+    ) => void,
+};
 
+// {students}: {students: Student[]}
+const StudentList = ({students, onAdd, onRemove}: StudentListProps) => {
     return (
-        <ul className="w-full">
-            {studentList.map((student) => (
-                // might be a better way to pass the student to StudentCard
-                <StudentCard 
-                    key={student.id}
-                    id={student.id}
-                    firstName={student.firstName}
-                    lastName={student.lastName}
-                    grade={student.grade}
-                    average={student.average}
-                />
-            ))}
-        </ul>
+        <div>
+            <AddStudent 
+                onAdd={onAdd}
+            />
+            <ul className="w-full">
+                {students.map((student) => (
+                    // might be a better way to pass the student to StudentCard
+                    <StudentCard 
+                        key={student.id}
+                        student={student}
+                        onRemove={onRemove}
+                    />
+                ))}
+            </ul>
+        </div>
     );
 };
 

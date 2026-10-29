@@ -21,43 +21,43 @@ export const students: Student[] = [
     },
     {
         id: 2,
-        firstName: "",
-        lastName: "",
+        firstName: "John",
+        lastName: "Doe",
         grade: 9,
         average: 85
     },
     {
         id: 3,
-        firstName: "",
-        lastName: "",
+        firstName: "Miku",
+        lastName: "Hatsune",
         grade: 10,
         average: 55
     },
     {
         id: 4,
-        firstName: "",
-        lastName: "",
+        firstName: "Spamton",
+        lastName: "[BIG SHOT]",
         grade: 10,
         average: 35
     },
     {
         id: 5,
-        firstName: "",
-        lastName: "",
+        firstName: "Roaring",
+        lastName: "Knight",
         grade: 11,
         average: 75
     },
     {
         id: 6,
-        firstName: "",
-        lastName: "",
+        firstName: "Freddy",
+        lastName: "Fazbear",
         grade: 11,
         average: 99
     },
     {
         id: 7,
-        firstName: "",
-        lastName: "",
+        firstName: "Flowery",
+        lastName: "Jarona",
         grade: 12,
         average: 50
     },
