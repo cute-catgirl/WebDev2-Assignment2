@@ -5,14 +5,20 @@ Mae Moon
 */
 "use client"
 import { ChangeEvent, useState } from "react";
-import { students as defaultStudents, Student } from "../data/students";
+import { students as defaultStudents, Student } from "../app/data/students";
 import SearchBox from "./SearchBox";
+import StudentList from "./StudentList";
 
 export default function StudentPortal() {
     function filteredStudents() {
         if (searchQuery) {
+            const trimmedQuery = searchQuery.replaceAll(" ", "").toLowerCase();
             return students.filter((student) => {
-                return (student.firstName + student.lastName).replaceAll(" ", "").toLowerCase().includes(searchQuery.replaceAll(" ", "").toLowerCase());
+                const firstName = student.firstName.replaceAll(" ", "").toLowerCase();
+                const lastName = student.lastName.replaceAll(" ", "").toLowerCase();
+                const fullName = firstName + lastName
+                const fullNameReversed = lastName + firstName
+                return fullName.includes(trimmedQuery) || fullNameReversed.includes(trimmedQuery);
             })
         } else {
             return students;
@@ -31,10 +37,7 @@ export default function StudentPortal() {
                 <SearchBox searchQuery={searchQuery} onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     setSearchQuery(event.target.value)
                 }} />
-                {filteredStudents().map((student: Student, index: number) => (
-                    <p key={index}>{student.firstName} {student.lastName}</p>
-                ))}
-                {/* <StudentList students={getFilteredStudents} /> */}
+                <StudentList students={filteredStudents()} />
             </section>
             <section id="addstudent">
                 <h2 className="text-2xl font-semibold">Add student</h2>
