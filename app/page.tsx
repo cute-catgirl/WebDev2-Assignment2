@@ -1,13 +1,3 @@
-const pageStyle: React.CSSProperties = {
-  flex: 1,
-  minHeight: 0,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  overflow: "hidden",
-  background: "#fff7ed",
-};
-
 const mainStyle: React.CSSProperties={
   width: "60%",
   height: "70%",
@@ -23,7 +13,7 @@ const mainStyle: React.CSSProperties={
 
 export default function Home() {
   return (
-    <main style={pageStyle}>
+    <main className="flex flex-1 items-center justify-center overflow-hidden bg-[#fff7ed]">
       <div style={mainStyle}><p>Placeholder</p></div>
     </main>
   );
