@@ -22,11 +22,11 @@ interface StudentListProps {
 // {students}: {students: Student[]}
 const StudentList = ({students, onAdd, onRemove}: StudentListProps) => {
     return (
-        <div>
+        <div className="w-full">
             <AddStudent 
                 onAdd={onAdd}
             />
-            <ul className="w-full">
+            <ul>
                 {students.map((student) => (
                     // might be a better way to pass the student to StudentCard
                     <StudentCard 
