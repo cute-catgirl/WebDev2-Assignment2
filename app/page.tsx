@@ -1,20 +1,19 @@
-const mainStyle: React.CSSProperties={
-  width: "60%",
-  height: "70%",
-  background: "white",
-  padding: "1.5rem",
-  boxSizing: "border-box",
-  overflowY: "auto",
-  borderRadius: "10px",
-  borderStyle: "solid",
-  borderColor: "#ffd6a7",
-  borderWidth: "1px",
-};
+/*
+    Written by: Phoebe Atuchina
+    Date: 2026-10-30
+
+    This is the main page layout, which contains the backdrop, the frame for the main content, and the placeholder
+    for the main content. The main content is scrollable in both directions, in case of overflowing.
+
+    Inputs: currently none
+*/
 
 export default function Home() {
   return (
     <main className="flex flex-1 items-center justify-center overflow-hidden bg-[#fff7ed]">
-      <div style={mainStyle}><p>Placeholder</p></div>
+      <div className="h-[70%] w-[60%] box-border overflow-y-auto rounded-[10px] border border-[#ffd6a7] bg-white p-6">
+        <p>Placeholder</p>
+      </div>
     </main>
   );
 }
