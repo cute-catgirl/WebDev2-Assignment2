@@ -3,7 +3,6 @@
 // exists as a place holder for now
 
 "use client";
-import { Average } from "next/font/google";
 import {useState} from "react";
 
 interface AddStudentProps {
@@ -42,7 +41,7 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
         
         setAverage(event.target.value);
     };
-    
+
     const handleClick = () => {
         if (firstName === "" || lastName === "") {
             return;
@@ -60,40 +59,52 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
     };
 
     return (
-        <div>
-            <p>Add A student</p>
-            
-            <input
-                type="text"
-                value={firstName}
-                onChange={handleFirstNameChange}
-                placeholder="first name"
-                className="w-40"
-            />
-            <input
-                type="text"
-                value={lastName}
-                onChange={handleLastNameChange}
-                placeholder="last name"
-                className="w-40"
-            />
-            <input
-                type="number"
-                value={grade}
-                onChange={handleGradeChange}
-                placeholder="grade"
-                className="w-10"
-            />
-            <input
-                type="number"
-                value={average}
-                onChange={handleAverageChange}
-                placeholder="average"
-                className="w-15"
-            />
+        <div className="flex flex-col items-center w-full p-3 m-2 text-base text-black bg-blue-100">
+            <div className="flex flex-row flex-wrap">
+                <div className="flex flex-col mx-1">
+                    <label>First Name</label>
+                    <input
+                        type="text"
+                        value={firstName}
+                        onChange={handleFirstNameChange}
+                        placeholder=""
+                        className="w-30 px-1 text-sm border-2 rounded-lg bg-white border-slate-300 focus:border-blue-300 focus:outline-none"
+                    />
+                </div>
+                <div className="flex flex-col mx-1">
+                    <label>Last Name</label>
+                    <input
+                        type="text"
+                        value={lastName}
+                        onChange={handleLastNameChange}
+                        placeholder=""
+                        className="w-30 px-1 text-sm border-2 rounded-lg bg-white border-slate-300 focus:border-blue-300 focus:outline-none"
+                    />
+                </div>
+                <div className="flex flex-col mx-1">
+                    <label>Grade</label>
+                    <input
+                        type="number"
+                        value={grade}
+                        onChange={handleGradeChange}
+                        placeholder=""
+                        className="w-15 px-1 text-sm border-2 rounded-lg bg-white border-slate-300 focus:border-blue-300 focus:outline-none"
+                    />
+                </div>
+                <div className="flex flex-col mx-1">
+                    <label>Average</label>
+                    <input
+                        type="number"   
+                        value={average}
+                        onChange={handleAverageChange}
+                        placeholder=""
+                        className="w-15 px-1 text-sm border-2 rounded-lg bg-white border-slate-300 focus:border-blue-300 focus:outline-none"
+                    />
+                </div>
+            </div>
             <button
                 onClick={handleClick}
-                className="w-40"
+                className="w-30 h-8 mt-5 text-base rounded-lg text-white bg-blue-400 hover:underline hover:bg-blue-600 transition cursor-pointer"
             >
                 Add Student
             </button>

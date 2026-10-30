@@ -19,7 +19,8 @@ const StudentCard = ({student, onRemove}: StudentCardProps) => {
     const [detailsShown, setDetailsShown] = useState(false);
     
     const detailVisabilityLabel = detailsShown ? "Hide details" : "Show details";
-    const visabilityToggle = detailsShown ? "" :"hidden";
+    const detailVisabilityToggle = detailsShown ? "" :"hidden";
+    const honourRollVisabilityToggle = (student.average < 80) ? "hidden" : "";
 
     const handleDetailVisability = () => {
         setDetailsShown(!detailsShown);
@@ -30,25 +31,37 @@ const StudentCard = ({student, onRemove}: StudentCardProps) => {
     };
 
     return (
-        <li className="w-full">
-            <h1>{student.firstName}, {student.lastName}</h1>
-            <p>Grade: {student.grade}</p>
-            <div className={visabilityToggle}>
-                <p>Average: {student.average}</p>
-                <p className={(student.average < 80) ? "hidden" : ""}>[Honour roll badge]</p>
+        <li className=" w-full p-3 m-2 text-base text-black bg-blue-50">
+            <div className="flex items-center justify-between flex-wrap mb-2">
+                <h1 className="me-3 text-lg">
+                    {student.firstName}, {student.lastName}
+                </h1>
+                <p className="text-sm">
+                    Grade {student.grade}
+                </p>
             </div>
-            <div className="flex flex-row justify-between">
+            <div className={detailVisabilityToggle}>
+                <p className="text-sm">
+                    Average: {student.average}%
+                </p>
+                <div className={honourRollVisabilityToggle}>
+                    <p className="">
+                        [Honour roll badge]
+                    </p>
+                </div>
+            </div>
+            <div className="flex flex-row justify-between mt-2">
                 <button 
                     onClick={handleDetailVisability}
-                    className="bg-gray-200"
+                    className="w-32 h-8 rounded-lg bg-gray-200 hover:underline hover:bg-gray-300 transition cursor-pointer"
                 >
                     {detailVisabilityLabel}
                 </button>
                 <button 
                     onClick={handleClick}
-                    className="bg-gray-200"
+                    className="w-35 h-8 rounded-lg text-white bg-rose-500 hover:underline hover:bg-rose-700"
                 >
-                    Remove
+                    Remove Student
                 </button>
             </div>
         </li>
