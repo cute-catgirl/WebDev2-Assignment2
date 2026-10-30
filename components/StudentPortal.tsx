@@ -15,7 +15,7 @@ export default function StudentPortal() {
     const [searchQuery, setSearchQuery] = useState('');
 
     const addStudent = (firstName: string, lastName: string, grade: number, average: number) => {
-        const newStudent = {id: Date.now(), firstName: firstName, lastName: lastName, grade: grade, average: average}
+        const newStudent:Student = {id: Date.now(), firstName: firstName, lastName: lastName, grade: grade, average: average}
         setStudents([...students, newStudent])
     }
 
