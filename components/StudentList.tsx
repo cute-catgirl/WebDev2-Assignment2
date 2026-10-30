@@ -8,27 +8,17 @@ import {Student} from "@/app/data/students";
 
 interface StudentListProps {
     students: Student[],
-    onAdd: (
-        firstName: string, 
-        lastName: string, 
-        grade: number, 
-        average: number
-    ) => void
     onRemove: (
         id: number
     ) => void,
 };
 
 // {students}: {students: Student[]}
-const StudentList = ({students, onAdd, onRemove}: StudentListProps) => {
+const StudentList = ({students, onRemove}: StudentListProps) => {
     return (
         <div className="w-full">
-            <AddStudent 
-                onAdd={onAdd}
-            />
             <ul>
                 {students.map((student) => (
-                    // might be a better way to pass the student to StudentCard
                     <StudentCard 
                         key={student.id}
                         student={student}

@@ -8,8 +8,21 @@ import { ChangeEvent, useState } from "react";
 import { students as defaultStudents, Student } from "../app/data/students";
 import SearchBox from "./SearchBox";
 import StudentList from "./StudentList";
+import AddStudent from "./AddStudent";
 
 export default function StudentPortal() {
+    const [students, setStudents] = useState(defaultStudents);
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const addStudent = (firstName: string, lastName: string, grade: number, average: number) => {
+        const newStudent = {id: Date.now(), firstName: firstName, lastName: lastName, grade: grade, average: average}
+        setStudents([...students, newStudent])
+    }
+
+    function removeStudent(id: number) {
+        setStudents(students.filter((student) => student.id !== id))
+    }
+
     function filteredStudents() {
         if (searchQuery) {
             const trimmedQuery = searchQuery.replaceAll(" ", "").toLowerCase();
@@ -24,8 +37,7 @@ export default function StudentPortal() {
             return students;
         }
     }
-    const [students, setStudents] = useState(defaultStudents);
-    const [searchQuery, setSearchQuery] = useState('');
+    
     return (
         <div>
             <section id="overview">
@@ -37,11 +49,11 @@ export default function StudentPortal() {
                 <SearchBox searchQuery={searchQuery} onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     setSearchQuery(event.target.value)
                 }} />
-                <StudentList students={filteredStudents()} />
+                <StudentList students={filteredStudents()} onRemove={removeStudent} />
             </section>
             <section id="addstudent">
                 <h2 className="text-2xl font-semibold">Add student</h2>
-                {/* <AddStudent onAdd={addStudent} onRemove={removeStudent} /> */}
+                <AddStudent onAdd={addStudent} />
             </section>
         </div>
     )
