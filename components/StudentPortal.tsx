@@ -46,11 +46,11 @@ export default function StudentPortal() {
     
     return (
         <div>
-            <section id="overview">
+            <section id="overview" className="scroll-m-16">
                 <h2 className="text-2xl font-semibold">Overview</h2>
                 <StatsPanel students={students}/>
             </section>
-            <section id="students">
+            <section id="students" className="scroll-m-16">
                 <h2 className="text-2xl font-semibold">Students</h2>
                 <SearchBox searchQuery={searchQuery} onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     setSearchQuery(event.target.value)
@@ -63,7 +63,7 @@ export default function StudentPortal() {
                 </button>
                 <StudentList students={filteredStudents()} onRemove={removeStudent} />
             </section>
-            <section id="addstudent">
+            <section id="addstudent" className="scroll-m-16">
                 <h2 className="text-2xl font-semibold">Add student</h2>
                 <AddStudent onAdd={addStudent} />
             </section>
