@@ -2,8 +2,8 @@
 StatsPanel.tsx
 Mae Moon
 30 Oct 2026
-Displays the total number of students, the number of honour roll students, and the number of grade 12 students
-in a card, with each statistic containing a big number above a small description. Takes in the list of students,
+Displays the total number of students, the number of honour roll students, and the number of grade 12 students,
+with each statistic in a card containing a big number above a small description. Takes in the list of students,
 and calculates the statistics based on it. Since students is in state, this will automatically update when it changes.
 */
 
