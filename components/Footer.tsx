@@ -9,7 +9,7 @@
 const Footer = () => {
     return (
         <footer className="sticky bottom-0 border-t border-orange-200 bg-white">
-            <div className="flex items-center justify-evenly row-wrap w-[90%] mx-auto px-8 py-6">
+            <div className="flex items-center justify-evenly w-[90%] mx-auto px-8 py-6">
                 {/* location details */}
                 <div>
                     <p className="px-2 text-sm text-olive-800">
