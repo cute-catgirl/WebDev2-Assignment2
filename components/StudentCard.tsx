@@ -1,5 +1,10 @@
 // StudentCard.tsx
 // Created by Kenzie Monaghan on Oct 27th 2026
+// Takes a student that uses the Student interface, and and an onRemove arrow function.
+// The student's info is used to fill in the details of the card, allowing it to constantly display a full name a grade.
+// In the case a user presses the "Show details" button on the card, the student's average will be displayed, along with an honour roll badge if their average is at or above 80.
+// The onRemove arrow function is used by the "Remove Student" button so that when it is clicked, the arrow function can be given the student's id which will be used by code in StudentPortal to remove the student from the list of students.
+// The returned compnent is a single card filled with a student's info, a button to show/hide more details, and a button to remove this student.
 
 "use client"
 import { useState } from "react";

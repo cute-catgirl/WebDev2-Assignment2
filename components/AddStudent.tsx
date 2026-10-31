@@ -1,6 +1,11 @@
 // AddStudent.tsx
 // Created by Kenzie Monaghan on Oct 27th 2026
-// exists as a place holder for now
+// Takes in an onAdd arrow function which has all values needed to create a new student except for an id, since StudentPortal is better to handle selecting an id.
+// The onAdd arrow function is used by the "Add Student" button when it is clicked, which will allow this component to provide the values that code in StudentPortal needs to add a new student to the list.
+// In the case the "Add Student" button gets pressed but one/both of the "First Name" and "Last Name" inputs are empty, onAdd will not be run.
+// Otherwise, the onAdd arrow function is given the values inside of the "First Name", "Last Name", "Grade", and "Average" inputs in that order.
+// Successfully adding a student will set "First Name"/"Last Name" inputs to be empty, "Grade" input to 9, and "Average" input to 70.
+// The returned component has the 4 inputs to provide info for a new student, and a button to add the student.
 
 "use client";
 import {useState} from "react";
