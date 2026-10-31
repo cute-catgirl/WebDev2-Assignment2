@@ -2,6 +2,9 @@
 SearchBox.tsx
 Mae Moon
 27 Oct 2026
+
+A simple SearchBox component used to search for students. Takes in the current searchQuery and an onChange callback.
+Doesn't handle any search logic or filtering itself - this is done in StudentPortal.
 */
 "use client"
 import { ChangeEventHandler } from "react";
