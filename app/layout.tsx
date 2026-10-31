@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className="bg-orange-50 min-h-screen">
+      <body className="min-h-screen bg-orange-50">
         <Navbar />
         {children}
         <Footer />
