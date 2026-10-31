@@ -1,9 +1,8 @@
 // StudentList.tsx
 // Created by Kenzie Monaghan on Oct 27th 2026
-// rough draft, does not take in a list of students and is not responsive
+// 
 
 import StudentCard from "@/components/StudentCard";
-import AddStudent from "@/components/AddStudent";
 import {Student} from "@/app/data/students";
 
 interface StudentListProps {

@@ -1,6 +1,5 @@
 // StudentCard.tsx
 // Created by Kenzie Monaghan on Oct 27th 2026
-// rough draft, completely lacks responsiveness, functionality is the only thing complete
 
 "use client"
 import { useState } from "react";
@@ -45,7 +44,7 @@ const StudentCard = ({student, onRemove}: StudentCardProps) => {
                     Average: {student.average}%
                 </p>
                 <div className={honourRollVisabilityToggle}>
-                    <p className="">
+                    <p>
                         [Honour roll badge]
                     </p>
                 </div>
