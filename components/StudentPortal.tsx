@@ -2,6 +2,8 @@
 StudentPortal.tsx
 Mae Moon
 27 Oct 2026
+Contains all the other components for the student portal and keeps track of state - the list of students,
+and the current search query. Takes in no props since this acts as the main UI and state for our app.
 */
 "use client"
 import { ChangeEvent, useState } from "react";
@@ -9,6 +11,7 @@ import { students as defaultStudents, Student } from "../app/data/students";
 import SearchBox from "./SearchBox";
 import StudentList from "./StudentList";
 import AddStudent from "./AddStudent";
+import StatsPanel from "./StatsPanel";
 
 export default function StudentPortal() {
     const [students, setStudents] = useState(defaultStudents);
@@ -42,7 +45,7 @@ export default function StudentPortal() {
         <div>
             <section id="overview">
                 <h2 className="text-2xl font-semibold">Overview</h2>
-                {/* <StatsPanel students={students}/> */}
+                <StatsPanel students={students}/>
             </section>
             <section id="students">
                 <h2 className="text-2xl font-semibold">Students</h2>
