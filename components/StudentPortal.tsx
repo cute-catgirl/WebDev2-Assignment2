@@ -26,6 +26,9 @@ export default function StudentPortal() {
         setStudents(students.filter((student) => student.id !== id))
     }
 
+    function clearAllStudents(){
+        setStudents([])
+    }
     function filteredStudents() {
         if (searchQuery) {
             const trimmedQuery = searchQuery.replaceAll(" ", "").toLowerCase();
@@ -52,6 +55,12 @@ export default function StudentPortal() {
                 <SearchBox searchQuery={searchQuery} onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     setSearchQuery(event.target.value)
                 }} />
+                <button 
+                    onClick={clearAllStudents}
+                    className="w-20 h-6 mt-2 rounded-lg text-white bg-rose-500 hover:underline hover:bg-rose-700"
+                >
+                    Clear all
+                </button>
                 <StudentList students={filteredStudents()} onRemove={removeStudent} />
             </section>
             <section id="addstudent">
