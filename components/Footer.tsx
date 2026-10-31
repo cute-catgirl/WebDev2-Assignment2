@@ -6,28 +6,31 @@
     the school. The school email can also be clicked to quickly send a message (only in theory; in practice, it is a placeholder).
 */
 
-const footerStyle: React.CSSProperties = {
-  position: "fixed",
-  left: "0",
-  bottom: "0",
-  display: 'block',
-  width: '100%',
-}
-
 const Footer = () => {
     return (
-        <footer className="bg-white border-t border-orange-200" style={footerStyle}>
-            <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-                <p className="text-sm text-olive-800 px-2">
-                    New Generation High School
-                </p>
-                <p className="text-sm text-olive-400 px-2">308 Negra Arroyo Lane, Albuquerque, New Mexico</p>
-                <p className="text-sm text-olive-400 px-2">+1 (570) 234-00-03</p>
-                <a className="text-sm font-medium text-orange-500 px-2
-                hover:text-orange-800"
-                href="mailto:example@email.com">
-                contact@learn.nghs.ca
-                </a>
+        <footer className="sticky bottom-0 border-t border-orange-200 bg-white">
+            <div className="flex items-center justify-evenly row-wrap w-[90%] mx-auto px-8 py-6">
+                {/* location details */}
+                <div>
+                    <p className="px-2 text-sm text-olive-800">
+                        New Generation High School
+                    </p>
+                    <p className="px-2 text-sm text-olive-400">
+                        308 Negra Arroyo Lane, Albuquerque, New Mexico
+                    </p>
+                </div>
+                {/* contact details */}
+                <div>
+                    <p className="px-2 text-sm text-olive-400">
+                        +1 (570) 234-00-03
+                    </p>
+                    <a 
+                        className="px-2 text-sm font-medium text-orange-500 hover:text-orange-800"
+                        href="mailto:example@email.com"
+                    >
+                        contact@learn.nghs.ca
+                    </a>
+                </div>
             </div>
         </footer>
     );
