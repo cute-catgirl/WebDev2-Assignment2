@@ -31,7 +31,7 @@ const StudentCard = ({student, onRemove}: StudentCardProps) => {
     };
 
     return (
-        <li className=" w-full p-3 m-2 text-base text-black bg-blue-50">
+        <li className=" w-full p-3 my-2 text-base text-black bg-blue-50">
             <div className="flex items-center justify-between flex-wrap mb-2">
                 <h1 className="me-3 text-lg">
                     {student.firstName}, {student.lastName}

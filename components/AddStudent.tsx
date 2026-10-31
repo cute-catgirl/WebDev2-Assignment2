@@ -59,7 +59,7 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
     };
 
     return (
-        <div className="flex flex-col items-center w-full p-3 m-2 text-base text-black bg-blue-100">
+        <div className="flex flex-col items-center w-full p-3 text-base text-black bg-blue-100">
             <div className="flex flex-row flex-wrap">
                 <div className="flex flex-col mx-1">
                     <label>First Name</label>
