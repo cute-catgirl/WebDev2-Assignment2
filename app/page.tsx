@@ -1,4 +1,3 @@
-import Image from "next/image";
 import StudentPortal from "../components/StudentPortal";
 
 /*
