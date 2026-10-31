@@ -16,8 +16,14 @@ interface StudentListProps {
 };
 
 const StudentList = ({students, onRemove}: StudentListProps) => {
+    const messageToggle = students.length == 0 ? "": "hidden";
     return (
         <div className="w-full">
+            <div className={messageToggle}>
+                <p className="text-center text-lg">
+                    No Students could be found!
+                </p>
+            </div>
             <ul>
                 {students.map((student) => (
                     <StudentCard 
