@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Info on Our App
+Deployed site: https://web-dev2-assignment2.vercel.app/
 
-## Getting Started
+Group Members, and what files each member did:
 
-First, run the development server:
+    Mae Moon
+     - components/SearchBox.tsx
+     - components/StatsPannel.tsx
+     - components/StudentPortal.tsx
+    Kenzie Monaghan
+     - components/StudentList.tsx
+     - components/AddStudent.tsx
+     - components/StudentCard.tsx
+    Phoebe Atuchina
+     - app/layout.tsx
+     - app/page.tsx
+     - components/Navbar.tsx
+     - components/Footer.tsx
+it was a combined effort to touch up each other's code while merging
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+TEST CHECKLIST
+| Test# | Outcome |
+| - | - |
+| 1 | passed |
+| 2 | passed |
+| 4 | passed |
+| 5 | passed |
+| 6 | passed |
+| 7 | passed |
+| 8 | passed |
+| 9 | passed? |
+| 10 | passed? | 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Test 9: could not figure out how to properly "Narrow the browser to phone width (DevTools device toolbar)", but the page did not noticeablly break when narrowing the chrome window, or setting the screen dimensions to that of a phone using chrome's inspect.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Test 10: the navbar works, but when it jumps it puts the start behind the navbar. this could not be fixed before the due date.
