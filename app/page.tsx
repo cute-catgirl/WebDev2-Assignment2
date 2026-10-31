@@ -13,8 +13,8 @@ import StudentPortal from "../components/StudentPortal";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 items-center justify-center overflow-hidden bg-orange-50">
-      <div className="h-[70%] w-[60%] box-border overflow-y-auto rounded-[10px] border border-orange-200 bg-white p-6">
+    <main className="flex flex-1 items-center justify-center bg-orange-50">
+      <div className="w-[80%] rounded-[10px] p-6 border border-orange-200 bg-white">
         <StudentPortal />
       </div>
     </main>
